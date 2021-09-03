@@ -1,0 +1,59 @@
+input[type=text],input[type=password],input[type=email],select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius:4px;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    width: 50%;
+    background-color:black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color:rgb(2, 45, 175) ;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color:whitesmoke;
+    padding: 5px;
+  }
+  span{
+      font-size: 12px;
+      color:red;
+  }
+  .login,
+  .login a {
+    text-align: right;
+    font-size: 10px;
+    padding-top:5px;
+    margin: 0;
+    color: #167bff;
+  }
+  .outer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .inner {
+    width: 450px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 4px 10px 4px 19px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+ 

@@ -1,0 +1,9 @@
+.Home{
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+	    width: 80%;
+}
