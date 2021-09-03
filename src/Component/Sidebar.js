@@ -2,7 +2,11 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import CountryCard from './CountryCard';
 import Home from './Home';
-function Sidebar({data}) {
+import Favourite from './Favourite';
+function Sidebar(props) {
+
+    const {data, setSelectedCountry,setFavCountry} = props;
+   
     const [selectedregion, setSelectedregion] = useState("All");
     const [filter, setFilter] = useState(false);
     const [state, setState] = useState(data);
@@ -21,17 +25,20 @@ function Sidebar({data}) {
     
     return (
         <div>
-        <section>
-            <button onClick={handleChange}>Filter by region</button>
-            <select onChange={(event)=>setSelectedregion(event.target.value)}>
-                                        { uniqueList.map((val) =>{
-                                            return(
-                                            <option key={val} value={val}>{val}</option>
-                                            );      
-                                        })}
-            </select>
-        </section>
-        {filter?<CountryCard data={state}/> :<CountryCard data={data}/>}
+        
+        <div>   
+            <section>
+                <button onClick={handleChange}>Filter by region</button>
+                <select onChange={(event)=>setSelectedregion(event.target.value)}>
+                                            { uniqueList.map((val) =>{
+                                                return(
+                                                <option key={val} value={val}>{val}</option>
+                                                );      
+                                            })}
+                </select>
+            </section>
+        </div>                                    
+        {filter?<CountryCard data={state} setSelectedCountry={setSelectedCountry} setFavCountry={setFavCountry}/> :<CountryCard data={data} setSelectedCountry={setSelectedCountry} setFavCountry={setFavCountry}/>}
         </div>
     )
 }

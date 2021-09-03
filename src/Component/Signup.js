@@ -112,10 +112,12 @@ function Signup() {
                         </span>
                      </div>
                  </div>
-                    </form>:<Login/>}
+                    </form>:
+                    <Login/>
+                    }
             
         </div>
-            
+           
         </div>
     )
 }
